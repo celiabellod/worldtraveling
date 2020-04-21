@@ -1,0 +1,59 @@
+.ban {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.inner-banner {
+    position: absolute;
+    text-align: center;
+    h1 {
+        color:#eee9e5;
+        text-shadow: 3px 3px 30px black;
+        font-family: 'Dancing Script';
+    }
+
+}
+
+
+@media (max-width: 767px)  {
+        h1 {
+            font-size: 4em;
+        }
+    }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+        h1 {
+            font-size: 6em;
+            margin-bottom: 1.5em;
+        }
+}
+
+
+@media (min-width: 1025px) {
+    h1{
+        font-size: 8em;
+        margin-bottom: 1.5em;
+
+    }
+
+}
+
+.search-bar{
+    background:#1C2331;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    select{
+        margin-right: 5px;
+    }
+    .row{
+        padding:15px;
+    }
+    &--index{
+        transform: translateY(-60px);
+    }
+    
+}
+

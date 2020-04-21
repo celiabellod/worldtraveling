@@ -1,0 +1,45 @@
+<section class="container">
+    <div class="row">
+        {% if travels|length_is:"1" %}
+            {% for travel in travels %}
+                <div class="col-md-4 mb-4 mx-auto">
+                    <div class="card card-image"
+                        style="background-image: url({{ travel.picture }})">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <h2 class="white-text">{{ travel.destination }}</h2>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <h6 class="card-title pt-2"><strong>{{ travel.description |truncatewords:19 }}</strong></h6>
+                            <button type="button" class="btn btn-color btn-sm d-flex mx-auto mt-4"  onclick=document.location.href="{% url 'detail' pk=travel.id %}">En savoir plus&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for travel in travels %}
+                <div class="col-md-4 mb-4">
+                    <div class="card card-image"
+                        style="background-image: url({{ travel.picture }})">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <h2 class="white-text">{{ travel.destination }}</h2>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <i class="fas fa-star orange-text"> </i>
+                                <h6 class="card-title pt-2"><strong>{{ travel.description |truncatewords:19 }}</strong></h6>
+                            <button type="button" class="btn btn-color btn-sm d-flex mx-auto mt-4"  onclick=document.location.href="{% url 'detail' pk=travel.id %}">En savoir plus&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>

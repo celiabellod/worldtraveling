@@ -1,0 +1,44 @@
+{% extends 'store/base_with_nav.html' %}
+{% load static %}
+
+{% block link %}{% url 'index' %}{% endblock %}
+{% block title_link %}Voyages{% endblock %}
+{% block title_activ %}{{ travel.destination }}{% endblock %}
+{% block content %}
+<div class="container detail">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="media mt-3 col-lg-6 mx-auto">
+                <img class="d-flex align-self-start img-fluid mr-3" src="{{ travel.picture }}" alt="{{ travel.destination }}">
+            </div>
+            <div class="media-body col-lg-10 mx-auto">
+                <h4 class="mt-0 font-weight-bold">{{ travel.destination }}</h4>
+                <i class="fas fa-star orange-text"> </i>
+                <i class="fas fa-star orange-text"> </i>
+                <i class="fas fa-star orange-text"> </i>
+                <i class="fas fa-star orange-text"> </i>
+                <i class="fas fa-star orange-text"> </i>
+                <p class="font-weight-bold mt-1 mb-1 ">{{ travel.date_start }} - {{ travel.date_end }}</p>
+                <p>Prix : {{ travel.price }} €</p>
+                <p class="text-justify">{{ travel.description }}</p>
+                <p class="mb-0">Nombre de personnes : {{ travel.nb_people }}</p>
+                <p class="ref">Ref: {{ travel.reference }}</p>
+                <div class="row">
+                    <div class="col-md-4 d-block mx-auto">
+                        <button type="button" class="btn btn-color btn-sm mx-auto mt-4"  
+                                onclick=document.location.href="{% url 'booking' travel_id=travel.id %}">
+                                    Réserver&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+                        </button>
+                        <button type="button" class="btn btn-color btn-sm  mx-auto mt-4"  
+                                onclick=document.location.href="{% url 'contact' travel_id=travel.id %}">
+                                    Contactez-nous&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

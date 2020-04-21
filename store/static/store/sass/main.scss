@@ -1,0 +1,11 @@
+@import "./utils/variable";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./composant/buttons.scss";
+@import "./composant/nav.scss";
+@import "./composant/footer.scss";
+@import "./composant/cookies_container";
+
+@import "./pages/index";

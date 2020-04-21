@@ -1,0 +1,16 @@
+
+.btn {
+    border-radius : 10px;
+    color: white;
+    &-color{
+        background: linear-gradient(20deg,#f06292, #ad1457 );
+        
+    }
+    &:hover{
+        color: white;
+
+        }
+
+}
+
+

@@ -1,0 +1,18 @@
+{% extends 'store/base.html' %}
+{% block main %}
+<div class="bc-icons-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb unique-color-dark">
+        <li class="breadcrumb-item">
+            <a class="white-text" href="{% block link %}{% endblock link %}">{% block title_link %}{% endblock title_link %}</a>
+            <i class="fas fa-angle-double-right mx-2 pink-text"
+            aria-hidden="true"></i>
+        </li>
+        <li class="breadcrumb-item active white-text">{% block title_activ %}{% endblock title_activ %}</li>
+      </ol>
+    </nav>
+</div>
+{% block content %}
+{% endblock %}
+
+{% endblock %}

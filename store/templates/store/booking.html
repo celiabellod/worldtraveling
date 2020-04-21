@@ -1,0 +1,35 @@
+{% extends 'store/base_with_nav.html' %}
+{% load static %}
+
+{% block link %}{% url 'detail' pk=travel.id %}{% endblock %}
+{% block title_link %}{{ travel.destination }}{% endblock %}
+{% block title_activ %}Réservation {{ travel.destination }}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="text-center">
+                <img class="mb-3" width="150px" src="{{ travel.picture }}" alt="{{ travel.destination }}">
+            </div>
+            <h2 class="text-indigo text-center pt-2">Réservation : {{ travel.destination }}</h2>
+            <p class="text-center">{{travel.date_start}} - {{ travel.date_end }}</p>
+            <hr class="pink darken-3 mx-auto mt-0" style="width: 60px;">
+            <form action="{% url 'booking' travel_id=travel.id %}" method="POST">
+                <p class="col-md-11 mx-auto text-center">{{message}}</p>
+                {%csrf_token %}
+                {{ form.as_p}}
+                <div class="d-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-sm btn-color" 
+                            onclick=document.location.href="{% url 'detail' pk=travel.id %}">
+                        Retour
+                    </button>
+                    <button type="submit" class="btn btn-color btn-sm">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

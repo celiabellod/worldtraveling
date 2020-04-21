@@ -1,0 +1,7 @@
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-right: 0rem;
+    content: "";
+}
+.breadcrumb {
+    border-radius: 0;
+}

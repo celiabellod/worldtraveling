@@ -1,0 +1,99 @@
+.container-fluid {
+  padding: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1em;
+}
+
+.ref {
+  font-size: 0.8em;
+}
+
+.btn {
+  border-radius: 10px;
+  color: white;
+}
+.btn-color {
+  background: linear-gradient(20deg, #f06292, #ad1457);
+}
+.btn:hover {
+  color: white;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 0rem;
+  content: "";
+}
+
+.breadcrumb {
+  border-radius: 0;
+}
+
+footer p a {
+  font-size: 1.1em;
+}
+footer a:hover {
+  text-decoration: underline white;
+}
+footer h3 {
+  text-align: center;
+}
+
+#cookie_directive_container {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#cookie_directive_container p, #cookie_directive_container h4 {
+  color: #1C2331;
+}
+
+.ban {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.inner-banner {
+  position: absolute;
+  text-align: center;
+}
+.inner-banner h1 {
+  color: #eee9e5;
+  text-shadow: 3px 3px 30px black;
+  font-family: "Dancing Script";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 6em;
+    margin-bottom: 1.5em;
+  }
+}
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 8em;
+    margin-bottom: 1.5em;
+  }
+}
+.search-bar {
+  background: #1C2331;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.search-bar select {
+  margin-right: 5px;
+}
+.search-bar .row {
+  padding: 15px;
+}
+.search-bar--index {
+  transform: translateY(-60px);
+}
+
+/*# sourceMappingURL=style.css.map */

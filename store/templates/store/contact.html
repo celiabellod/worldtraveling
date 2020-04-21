@@ -1,0 +1,51 @@
+{% extends 'store/base_with_nav.html' %}
+{% load static %}
+
+{% block link %}
+    {% if travel.id > 0 %}
+        {% url 'detail' pk=travel.id %}
+    {% else %}
+        {% url 'index' %}
+    {% endif %}
+{% endblock %}
+
+{% block title_link %}
+    {% if travel.id > 0%}
+        {{ travel.destination }}
+    {% else %}
+        Accueil
+    {% endif %}
+{% endblock %}
+
+
+{% block title_activ %}Contactez-nous{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h2 class="text-indigo text-center pt-2">Contactez-nous&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope prefix"></i></h2>
+            <hr class="pink darken-3 mx-auto mt-0" style="width: 60px;">
+            <form action="{% url 'contact' %}" method="POST">
+                <p class="col-md-11 mx-auto text-center">{{message}}</p>
+                {%csrf_token %}
+                {{ form.as_p}}
+                <div class="d-flex justify-content-sm-center">
+                {% if travel.id > 0 %}
+                    <button type="button" class="btn btn-sm btn-color" 
+                            onclick=document.location.href="{% url 'detail' pk=travel.id %}">Retour
+                    </button>
+                {% else %}
+                    <button type="button" class="btn btn-sm btn-color" 
+                            onclick=document.location.href="{% url 'index' %}">Retour
+                    </button>
+                            
+                {% endif %}
+                <button type="submit" class="btn btn-color btn-sm">Envoyer</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="fr" class="full-height">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}" />
+
+    <title>WorldTraveling</title>
+</head>
+
+<body>
+
+    {% block main %}
+    {% endblock %}
+
+    <div id="cookie_directive_container" class="container-fluid fixed-bottom" style="display: none">
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-inner navbar-content-center">
+                    <h4>Ce site Web utilise des cookies</h4>
+                    <p>
+                        Les cookies nous permettent de personnaliser le contenu et les annonces, d'offrir des
+                        fonctionnalités relatives aux médias sociaux et d'analyser notre trafic. 
+                    </p>
+                    <a href="#" id="cookie_accept" class="btn btn-sm btn-color pull-right">Accepter</a>
+                    <a href="#" id="cookie_refuse" class="btn btn-sm btn-color pull-right">Fermer</a>
+                    <br>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <footer class="page-footer font-small unique-color-dark">
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-3">
+                    <h6 class="text-uppercase font-weight-bold">WorldTraveling</h6>
+                    <hr class="pink darken-3 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Notre compagnie s'engage à vous apporter tout renseignement néccessaire à vos futurs
+                        réservations.</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 mt-3">
+                    <h6 class="text-uppercase font-weight-bold">Nous contacter</h6>
+                    <hr class="pink darken-3 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="{% url 'contact' %}"><i
+                                class="fas pink-text fa-angle-double-right"></i>&nbsp;&nbsp;&nbsp;Service client</a></p>
+                    <p><i class="fas fa-home mr-3"></i>Paris CEDEX, FRANCE</p>
+                    <p><i class="fas fa-envelope mr-3"></i>contact@worldtraveling.com</p>
+                    <p><i class="fas fa-phone mr-3"></i>+33 00 00 00 00</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mt-3">
+                    <h6 class="text-uppercase font-weight-bold">Découvrir</h6>
+                    <hr class="pink darken-3 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="{% url 'index' %}"><i
+                                class="fas pink-text fa-angle-double-right"></i>&nbsp;&nbsp;&nbsp;Nos destinations</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mt-3">
+                    <h3><a href="https://github.com/celiabellod/worldtraveling"><i class="fab fa-github"></i></a></h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+    <!-- cookies javascript -->
+    <script type="text/javascript" src="{% static 'store/js/cookie.js' %}"></script>
+    <!-- cookies smoothscroll -->
+    <script type="text/javascript" src="{% static 'store/js/smoothscroll.js' %}"></script>
+    <!-- scrollbar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>

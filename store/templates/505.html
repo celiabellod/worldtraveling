@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-6 mx-auto">
+            <p class="text-indigo text-center pt-2">OOPS! Une erreur s'est produite. Nous faisons notre possible pour régler le problème!</p>
+            <hr class="pink darken-3 mx-auto mt-0" style="width: 60px;">
+            <button type="button" class="btn btn-lg btn-color" 
+                    onclick=document.location.href="{% url 'index' %}">
+                        Revenir à l'accueil</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+
+{% block main %}
+
+<header>
+    <section class="container-fluid">
+        <div class="row">
+            <img class= "ban img-fluid " src="{% static 'store/images/header/index/beach.jpg' %}" alt="banniere du site" />
+            <div class="inner-banner col-md-12 mx-auto">
+                <h1>WorldTraveling.</h1>
+                <a href="#store" class="btn btn-md btn-color">
+                    Découvrez nos destinations&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</header>
+<main>
+    <form action="{% url 'index' %}#store" method="GET" accept-charset="utf8">
+        <div class="container search-bar search-bar--index" id="store">
+            <h2 class="text-white text-center pt-2">Nos destinations</h2>
+            <hr class="pink darken-3 mx-auto mt-0" style="width: 60px;">
+            <div class="row form-group mx-auto ">
+                <select class="browser-default custom-select col-md-10 mx-auto mb-2" id="travel" name="query">
+                    <option selected disabled>Rechercher par destination..</option>
+                    {% for travel in travels_in_searchbar %}
+                    <option value="{{travel.destination}}">{{travel.destination}}</option>
+                    {% endfor %}
+                </select>
+                <div class="pl-0 mx-auto">
+                <button class="form-control pink darken-3" type="submit"><i class="fas fa-search text-white"
+                    aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {% include 'store/list.html' %}
+
+</main>
+{% endblock %}
+
