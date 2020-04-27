@@ -8,9 +8,16 @@
     }
     &:hover{
         color: white;
+        transform: scale(1.2);
 
-        }
+    }
 
+}
+
+@media (max-width: 767px)  {
+    .btn {
+        margin-top: 10%;
+    }
 }
 
 

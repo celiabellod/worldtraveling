@@ -20,8 +20,14 @@ body {
 }
 .btn:hover {
   color: white;
+  transform: scale(1.2);
 }
 
+@media (max-width: 767px) {
+  .btn {
+    margin-top: 10%;
+  }
+}
 .breadcrumb-item + .breadcrumb-item::before {
   padding-right: 0rem;
   content: "";
@@ -56,8 +62,8 @@ footer h3 {
 */
 .ban {
   background-image: url("../images/header/index/beach.jpg");
-  background-position: center center;
-  height: 600px;
+  background-position: center top;
+  height: 800px;
   width: 100%;
 }
 
@@ -76,6 +82,7 @@ footer h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .inner-banner h1 {
   color: #eee9e5;
