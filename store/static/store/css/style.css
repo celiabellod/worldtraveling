@@ -20,12 +20,12 @@ body {
 }
 .btn:hover {
   color: white;
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 @media (max-width: 767px) {
   .btn {
-    margin-top: 10%;
+    margin-top: 20%;
   }
 }
 .breadcrumb-item + .breadcrumb-item::before {
