@@ -7,6 +7,7 @@
 
 .ban {
     background-image: url('../images/header/index/beach.jpg');
+    background-position:center center;
     height: 600px;
     width: 100%;
 }
@@ -26,8 +27,9 @@
 .inner-banner {
     display: flex;
     justify-content: center;
+    align-items: center;
     h1 {
-        align-items: center;
+        
         color:#eee9e5;
         text-shadow: 3px 3px 30px black;
         font-family: 'Dancing Script';
