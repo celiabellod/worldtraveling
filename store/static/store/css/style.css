@@ -12,6 +12,7 @@ body {
 }
 
 .btn {
+  align-items: center;
   border-radius: 10px;
   color: white;
 }
@@ -56,7 +57,8 @@ footer h3 {
 */
 .ban {
   background-image: url("../images/header/index/beach.jpg");
-  height: 500px;
+  height: 600px;
+  width: 100%;
 }
 
 /*
@@ -73,9 +75,9 @@ footer h3 {
 .inner-banner {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .inner-banner h1 {
+  align-items: center;
   color: #eee9e5;
   text-shadow: 3px 3px 30px black;
   font-family: "Dancing Script";
