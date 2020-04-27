@@ -48,15 +48,32 @@ footer h3 {
   color: #1C2331;
 }
 
+/*ban {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+*/
 .ban {
-  position: relative;
-  max-width: 100%;
-  height: auto;
+  background-image: url("../images/header/index/beach.jpg");
+  height: 500px;
 }
 
+/*
 .inner-banner {
-  position: absolute;
-  text-align: center;
+    position: absolute;
+    text-align: center;
+    h1 {
+        color:#eee9e5;
+        text-shadow: 3px 3px 30px black;
+        font-family: 'Dancing Script';
+    }
+}
+*/
+.inner-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inner-banner h1 {
   color: #eee9e5;
