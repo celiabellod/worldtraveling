@@ -2,7 +2,7 @@
     <div class="row">
         {% if travels|length_is:"1" %}
             {% for travel in travels %}
-                <div class="col-md-4 mb-4 mx-auto">
+                <div class="col-md-4 mx-auto mb-5">
                     <div class="card card-image"
                         style="background-image: url({{ travel.picture }})">
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
@@ -22,7 +22,7 @@
             {% endfor %}
         {% else %}
             {% for travel in travels %}
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-5">
                     <div class="card card-image"
                         style="background-image: url({{ travel.picture }})">
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
